@@ -1,6 +1,7 @@
 #include "Automata.h"
 
 using std::cout;
+using std::endl;
 
 Automata::Automata() {
     cash = 0;
@@ -22,14 +23,14 @@ void Automata::off() {
 }
 void Automata::coin(int money)
 {
-    if (state() == WAIT) {
+    if (state == WAIT) {
         state = ACCEPT;
     }
     cash += money; 
 }
-std::string Automata::getMenu() {
+void Automata::getMenu() {
     for (int i = 0; i < 3; i++) {
-        cout << i + 1 << ". " << menu[i] << " " << prices[i] << \n;
+        cout << i + 1 << ". " << menu[i] << " " << prices[i] << endl;
     }
 }
 States Automata::getState() {
@@ -61,9 +62,10 @@ void Automata::cook() {
     }
 }
 int Automata::finish() {
+    int temp = 0;
     if (state == COOK) {
         state = WAIT;
-        int temp = cash;
+        temp = cash;
         cash = 0;
     }
     return temp;
