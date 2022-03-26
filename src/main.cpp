@@ -1,14 +1,12 @@
 #include <iostream>
 #include "Automata.h"
 
-using namespace std;
+using std::string;
 
-int main()
-{
+int main() {
     Automata machine = Automata();
-
     machine.on();
-    machine.etMenu();
+    machine.getMenu();
     machine.coin(20);
     machine.choice(1);
     machine.finish();
@@ -17,6 +15,5 @@ int main()
     machine.choice(3);
     machine.finish();
     machine.off();
-
     return 0;
 }
