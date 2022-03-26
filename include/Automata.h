@@ -1,4 +1,8 @@
+#pragma once
+#include <iostream>
 #include <string>
+
+using std::string;
 
 enum States {
   OFF,
@@ -11,7 +15,7 @@ enum States {
 class Automata {
   private:
     int cash;
-    std::string* menu;
+    string* menu;
     int* prices;
     States state;
     int option;
