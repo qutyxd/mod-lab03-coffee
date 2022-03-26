@@ -14,7 +14,7 @@ class Automata {
     std::string* menu;
     int* prices;
     States state;
-    bool check(int _choice);
+    int option;
     
   public:
     Automata();
@@ -25,6 +25,7 @@ class Automata {
     States getState();
     void choice(int _choice);
     int cancel();
+    bool check();
     void cook();
     int finish();
  };
