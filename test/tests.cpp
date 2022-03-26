@@ -1,8 +1,7 @@
 #include <gtest/gtest.h>
 #include "Automata.h"
 
-TEST(task, test1)
-{
+TEST(task, test1) {
     Automata machine = Automata();
     machine.on();
     machine.coin(13);
@@ -11,8 +10,7 @@ TEST(task, test1)
     EXPECT_EQ(WAIT, result);
 }
 
-TEST(task, test2)
-{
+TEST(task, test2) {
     Automata machine = Automata();
     machine.on();
     machine.choice(2);
@@ -20,8 +18,7 @@ TEST(task, test2)
     EXPECT_EQ(WAIT, result);
 }
 
-TEST(task, test3)
-{
+TEST(task, test3) {
     Automata machine = Automata();
     machine.on();
     machine.coin(20);
