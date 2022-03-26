@@ -1,3 +1,4 @@
+// Copyright 2022 UNN-IASR
 #include "Automata.h"
 
 using std::cout;
@@ -21,12 +22,11 @@ void Automata::on() {
 void Automata::off() {
     if (state == WAIT) state = OFF;
 }
-void Automata::coin(int money)
-{
+void Automata::coin(int money) {
     if (state == WAIT) {
         state = ACCEPT;
     }
-    cash += money; 
+    cash += money;
 }
 void Automata::getMenu() {
     for (int i = 0; i < 3; i++) {
