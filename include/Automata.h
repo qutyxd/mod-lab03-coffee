@@ -13,7 +13,7 @@ class Automata
 {
   private:
     int cash;
-    string* menu;
+    std::string* menu;
     int* prices;
     States state;
     bool check(int _choice);
@@ -24,7 +24,7 @@ class Automata
     void on();
     void off();
     void coin(int money);
-    string etMenu();
+    std::string etMenu();
     States getState();
     void choice(int _choice);
     int cancel();
