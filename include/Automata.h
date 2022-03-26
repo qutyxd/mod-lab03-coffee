@@ -1,7 +1,6 @@
 #include <string>
 
-enum States
-{
+enum States {
   OFF,
   WAIT,
   ACCEPT,
@@ -9,24 +8,23 @@ enum States
   COOK
 };
 
-class Automata
-{
+class Automata {
   private:
     int cash;
     std::string* menu;
     int* prices;
     States state;
     bool check(int _choice);
-    void cook();
     
   public:
     Automata();
     void on();
     void off();
     void coin(int money);
-    std::string etMenu();
+    void getMenu();
     States getState();
     void choice(int _choice);
     int cancel();
+    void cook();
     int finish();
  };
