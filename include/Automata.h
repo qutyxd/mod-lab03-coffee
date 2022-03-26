@@ -20,8 +20,8 @@ class Automata {
     int* prices;
     States state;
     int option;
-  
-  public:
+
+ public:
     Automata();
     void on();
     void off();
