@@ -1,3 +1,4 @@
+// Copyright 2022 UNN-IASR
 #pragma once
 #include <iostream>
 #include <string>
@@ -13,14 +14,14 @@ enum States {
 };
 
 class Automata {
-  private:
+ private:
     int cash;
     string* menu;
     int* prices;
     States state;
     int option;
-    
-  public:
+  
+ public:
     Automata();
     void on();
     void off();
@@ -32,4 +33,4 @@ class Automata {
     bool check();
     void cook();
     int finish();
- };
+};
